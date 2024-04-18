@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer"
-import { loggerEmail } from "../../utils/Logger"
+import { loggerEmail } from "@/shared/utils/Logger"
 
 const transporter = nodemailer.createTransport({
   service: process.env.EMAIL_SERVICE || "gmail",

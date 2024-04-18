@@ -1,7 +1,7 @@
-import { ApplicationAPI as Entity } from '@applicationapi/domain/entities'
-import { ApplicationAPI as Repository } from '../../domain/repositories'
+import { ApplicationApi as Entity } from '@/application_api/domain/entities'
+import { ApplicationApi as Repository } from '@/application_api/domain/repositories'
 
-export class GetByIdApplicationApi {
+export class GetByIdUseCase {
 
     private readonly _repository: Repository
 

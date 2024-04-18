@@ -1,7 +1,7 @@
-import { CreateApplicationApi } from './CreateApplicationApi'
-import { GetByIdApplicationApi } from './GetByIdApplicationApi'
+import { CreateUseCase } from './Create'
+import { GetByIdUseCase } from './GetById'
 
 export {
-    CreateApplicationApi,
-    GetByIdApplicationApi,
+    CreateUseCase,
+    GetByIdUseCase,
 }

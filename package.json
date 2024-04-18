@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
-    "dev": "nodemon ./src/App.ts",
+    "ts-prepare": "ts-patch install -s",
+    "tsc": "tsc && tsc-alias",
+    "dev": "npm run ts-prepare && nodemon ./src/App.ts",
     "start": "node ./dist/App.js"
   },
   "keywords": [],
@@ -41,6 +42,10 @@
     "@types/nodemailer": "^6.4.14",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.6",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.1.2",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "typescript-transform-paths": "^3.4.7"
   }
 }

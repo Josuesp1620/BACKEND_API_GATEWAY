@@ -1,4 +1,4 @@
-export interface ApplicationAPI {
+export interface ApplicationApi {
     id?: string
     name?: string
     upstream_url?: string

@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express'
 
-import { ApplicationAPI as Entity } from '@applicationapi/domain/entities';
-import { CreateApplicationApi as UseCase } from '@applicationapi/application/use_cases';
-import { ImplementationSequelize } from '@applicationapi/infrastructure/implementacion/sequelize';
+import { ApplicationApi as Entity } from '@/application_api/domain/entities';
+import { CreateUseCase as UseCase } from '@/application_api/application/use_cases';
+import { ImplementationSequelize } from '@/application_api/infrastructure/implementacion/sequelize';
 
 export const createController = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {

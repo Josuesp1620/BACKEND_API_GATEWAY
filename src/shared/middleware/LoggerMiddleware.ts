@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { logger } from '../utils/Logger'
+import { logger } from '@/shared/utils/Logger'
 
 export class LoggerMiddleware {
   logRequestInfo(req: Request, res: Response, next: NextFunction): void {

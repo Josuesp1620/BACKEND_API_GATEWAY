@@ -1,6 +1,6 @@
-import { ApplicationAPI as Entity } from '@applicationapi/domain/entities'
-import { ApplicationAPI as Repository } from '@applicationapi/domain/repositories'
-import { ApplicationAPISequelize as Sequelize } from '../../driven-adapter/sequelize/postgres.model'
+import { ApplicationApi as Entity } from '@/application_api/domain/entities'
+import { ApplicationApi as Repository } from '@/application_api/domain/repositories'
+import { ApplicationApiSequelize as Sequelize } from '@/application_api/infrastructure/driven-adapter/sequelize/postgres.model'
 
 class ImplementationSequelize implements Repository {
 

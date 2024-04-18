@@ -4,7 +4,7 @@ import * as http from "http"
 import routes_v1 from "./routes/v1"
 import { error } from "console"
 import swaggerDocV1 from "./swagger/swagger"
-import { logger,log4js } from "../shared/utils/Logger"
+import { logger,log4js } from "@/shared/utils/Logger"
 
 export class Server {
     

@@ -1,13 +1,13 @@
-import { sequelize } from '@shared/services/sequelize-conector/index'
+import { sequelize } from '@/shared/services/sequelize-conector/index'
 import dotenv from 'dotenv'
 import { DataTypes, Model } from 'sequelize';
-import { loggerDataBase } from '@shared/utils/Logger';
+import { loggerDataBase } from '@/shared/utils/Logger';
 
 dotenv.config()
 
-class ApplicationAPISequelize extends Model {}
+class ApplicationApiSequelize extends Model {}
   
-ApplicationAPISequelize.init(
+ApplicationApiSequelize.init(
     {
         id: {
             type: DataTypes.UUID,
@@ -37,14 +37,14 @@ ApplicationAPISequelize.init(
     },
     {
         sequelize,
-        modelName: 'Aplication_API',
+        modelName: 'Aplication_Api',
         tableName: 'application_api',
         timestamps: true,
     }
 )
 
 
-ApplicationAPISequelize.sync()
+ApplicationApiSequelize.sync()
 .then(() => {
     loggerDataBase.warn('TABLA APPLICATION API => Las tablas se han sincronizado correctamente');
 })
@@ -53,4 +53,4 @@ ApplicationAPISequelize.sync()
 });
 
 
-export { ApplicationAPISequelize }
+export { ApplicationApiSequelize }

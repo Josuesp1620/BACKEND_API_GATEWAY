@@ -1,5 +1,5 @@
-import { ApplicationAPI } from './ApplicationApi'
+import { ApplicationApi } from './ApplicationApi'
 
 export {
-    ApplicationAPI
+    ApplicationApi
 }

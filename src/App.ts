@@ -1,5 +1,5 @@
 import dotenv from "dotenv"
-import { Backend } from "./core/Backend"
+import { Backend } from "@/core/Backend"
 
 try {
     dotenv.config({

@@ -28,20 +28,21 @@
     "module": "commonjs",                                /* Specify what module code is generated. */
     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
     // "moduleResolution": "node10",                     /* Specify how TypeScript looks up a file from a given module specifier. */
-    "baseUrl": "./",                                     /* Specify the base directory to resolve non-relative module names. */
+    "baseUrl": "src",                                     /* Specify the base directory to resolve non-relative module names. */
     "paths": {      
-      "@applicationapi/application/*": ["src/application_api/application/*"],
-      "@applicationapi/domain/*": ["src/application_api/domain/*"],
-      "@applicationapi/infrastructure/*": ["src/application_api/infrastructure/*"],
-
-      "@shared/middleware/*": ["src/shared/middleware/*"],
-      "@shared/services/*": ["src/shared/services/*"],
-      "@shared/utils/*": ["src/shared/utils/*"],
-
-      "@endpointapi/application/*": ["src/user/application/*"],
-      "@endpointapi/domain/*": ["src/user/domain/*"],
-      "@endpointapi/infrastructure/*": ["src/user/infrastructure/*"],
-    },                                                   /* Specify a set of entries that re-map imports to additional lookup locations. */
+      "@/*": ["*"]
+    },              
+    "plugins": [
+      /* Transform paths in output .js files */
+      {
+          "transform": "typescript-transform-paths"
+      },
+      /* Transform paths in output .d.ts files */
+      {
+          "transform": "typescript-transform-paths",
+          "afterDeclarations": true
+      }
+    ],                                     /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */

@@ -1,6 +1,6 @@
-import { ApplicationAPI as Entity } from '../entities'
+import { ApplicationApi as Entity } from '../entities'
 
-export interface ApplicationAPI {
+export interface ApplicationApi {
     getAll: () => Promise<Entity[]>
     save: (user: Entity) => Promise<Entity>
     update: (user: Entity) => Promise<Entity>
