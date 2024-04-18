@@ -1,6 +1,6 @@
 import swaggerUi from 'swagger-ui-express'
 import swaggerJSDoc from 'swagger-jsdoc'
-import { Router } from "express"
+import { Router } from 'express'
 
 const swaggerDocV1 = Router()
 
@@ -10,7 +10,7 @@ const options = {
     info: { title: 'API BACKEND LOGIN', version: '1.0.0' },
   },
   apis: [
-    "src/user/infrastructure/driving-adapter/api-rest/routes/user.routes.ts",
+    'src/user/infrastructure/driving-adapter/api-rest/routes/user.routes.ts',
   ]
   
 }

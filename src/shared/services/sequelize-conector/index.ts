@@ -1,6 +1,6 @@
 import { Sequelize, Options } from 'sequelize'
 import { loggerDataBase } from '@/shared/utils/Logger'
-import dotenv from "dotenv"
+import dotenv from 'dotenv'
 dotenv.config()
 
 const {

@@ -1,10 +1,10 @@
-import express from "express"
-import cors from "cors"
-import * as http from "http"
-import routes_v1 from "./routes/v1"
-import { error } from "console"
-import swaggerDocV1 from "./swagger/swagger"
-import { logger,log4js } from "@/shared/utils/Logger"
+import express from 'express'
+import cors from 'cors'
+import * as http from 'http'
+import routes_v1 from './routes/v1'
+import { error } from 'console'
+import swaggerDocV1 from './swagger/swagger'
+import { logger,log4js } from '@/shared/utils/Logger'
 
 export class Server {
     
@@ -49,7 +49,7 @@ export class Server {
                 logger.info(
                     `Version 1 Docs disponible en http://${this._host}:${this._port}/api/v1/docs`
                 )
-                logger.info(" Presione CTRL-C para detener\n")
+                logger.info(' Presione CTRL-C para detener\n')
 
                 resolve()
             })

@@ -1,4 +1,4 @@
-import { createController } from "./CreateController"
+import { createController } from './CreateController'
 
 export {
     createController,
