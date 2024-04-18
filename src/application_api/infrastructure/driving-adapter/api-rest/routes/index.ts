@@ -1,13 +1,13 @@
-import { Response, Router } from "express"
+import { NextFunction, Request, Response, Router } from "express"
 import { logger } from "@/shared/utils/Logger"
 
 import { ROUTES_APPLICATION_API } from "@/core/routes/v1/const.routes"
-import routes from './endpoints.routes'
+import routes from './routes'
 const route = Router()
 
 route.use(ROUTES_APPLICATION_API.APPLICATION_API, routes)
 
-route.use((err: Error, _req: any, res: Response, _next: any) => {
+route.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     logger.error(err + "\n")
     res.status(500).json({
         status: "error",

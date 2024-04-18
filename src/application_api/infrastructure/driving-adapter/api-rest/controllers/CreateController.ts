@@ -15,8 +15,8 @@ export const createController = async (req: Request, res: Response, next: NextFu
             origin_urls
         }
         
-        const postgresDBUserRepository = new ImplementationSequelize()
-        const useCase = new UseCase(postgresDBUserRepository)
+        const sequelizeRepository = new ImplementationSequelize()
+        const useCase = new UseCase(sequelizeRepository)
         const dataCreated = await useCase.run(data)
 
         res.status(201).json({
