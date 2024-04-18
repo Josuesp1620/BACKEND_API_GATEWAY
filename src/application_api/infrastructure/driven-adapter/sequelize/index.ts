@@ -10,11 +10,13 @@ class ApplicationApiSequelize extends Model {}
 ApplicationApiSequelize.init(
     {
         id: {
+            unique: true,
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
         name: {
+            unique: true,
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -31,6 +33,7 @@ ApplicationApiSequelize.init(
             defaultValue: [],
         },
         api_key: {
+            unique: true,
             type: DataTypes.STRING,
         },        
 

@@ -2,7 +2,7 @@ import { sequelize } from '@/shared/services/sequelize-conector'
 import dotenv from 'dotenv'
 import { DataTypes, Model } from 'sequelize';
 import { loggerDataBase } from '@/shared/utils/Logger';
-
+import { ApplicationApiSequelize } from '@/application_api/infrastructure/driven-adapter/sequelize';
 dotenv.config()
 
 class EndPointApiSequelize extends Model {}
@@ -10,12 +10,18 @@ class EndPointApiSequelize extends Model {}
 EndPointApiSequelize.init(
     {
         id: {
+            unique: true,
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
-        app_id: {
-            type: DataTypes.STRING,
+        app_id: {            
+            type: DataTypes.UUID,
+            references: {
+                model: ApplicationApiSequelize,
+                key: 'id',
+            },
+            onDelete: 'CASCADE',             
             allowNull: false
         },
         route: {
