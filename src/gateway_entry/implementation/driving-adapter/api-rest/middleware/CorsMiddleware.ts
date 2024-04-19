@@ -17,16 +17,16 @@ export class CorsMiddleware {
         const applicationAPI: Entity | null = await useCase.run(APP_ID);      
         
         if (applicationAPI?.origin_urls?.includes(req.headers.origin)) {          
-          const corsOptions : CorsOptions = {
-            origin: req.headers.origin,            
-            methods: ['POST'],
-            allowedHeaders: ['Content-Type', 'Authorization'],
-            exposedHeaders: ['Content-Length'],
-            credentials: false,
-            maxAge: 86400,
-          };
-          res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
-          cors(corsOptions)(req, res, next);
+          // const corsOptions : CorsOptions = {
+          //   origin: req.headers.origin,            
+          //   methods: ['POST'],
+          //   allowedHeaders: ['Content-Type', 'Authorization'],
+          //   exposedHeaders: ['Content-Length'],
+          //   credentials: false,
+          //   maxAge: 86400,
+          // };
+          // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+          // cors(corsOptions)(req, res, next);
           next()
         } else {
           return res.status(500).json({ message: 'Authentication Error' })
