@@ -1,22 +1,24 @@
 export const ROUTE_VERSION = '/api/v1'
 
-const APPLICATION_API : string = '/gateway-endpoint'
-const APPLICATION_API_CREATE : string = '/create'
+const GATEWAY_APPLICATION : string = '/gateway-endpoint'
+const GATEWAY_APPLICATION_CREATE : string = '/create'
 
-export const ROUTES_APPLICATION_API = {
-    APPLICATION_API,
-    APPLICATION_API_CREATE,
+export const ROUTES_GATEWAY_APPLICATION = {
+    GATEWAY_APPLICATION,
+    GATEWAY_APPLICATION_CREATE,
 }
 
-const ENDPOINT_API : string = '/gateway-endpoint'
-const ENDPOINT_API_CREATE : string = '/create'
-export const ROUTES_ENDPOINT_API = {
-    ENDPOINT_API,
-    ENDPOINT_API_CREATE,
+const GATEWAY_ENDPOINT : string = '/gateway-endpoint'
+const GATEWAY_ENDPOINT_CREATE : string = '/create'
+export const ROUTES_GATEWAY_ENDPOINT = {
+    GATEWAY_ENDPOINT,
+    GATEWAY_ENDPOINT_CREATE,
 }
 
 
-const API : string = '/app'
-export const API_ROUTES = {
-    API
+const GATEWAY_ENTRY : string = '/gateway-entry'
+const GATEWAY_ENTRY_APPLICATION : string = '/gateway-entry'
+export const ROUTES_GATEWAY_ENTRY = {
+    GATEWAY_ENTRY,
+    GATEWAY_ENTRY_APPLICATION,
 }

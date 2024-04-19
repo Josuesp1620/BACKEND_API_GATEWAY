@@ -1,9 +1,9 @@
 import { Router } from 'express'
 import { createController } from '../controllers'
-import { ROUTES_ENDPOINT_API } from '@/core/routes/v1/const.routes'
+import { ROUTES_GATEWAY_ENDPOINT } from '@/core/routes/v1/const.routes'
 
 const route = Router()
 
-route.post(ROUTES_ENDPOINT_API.ENDPOINT_API_CREATE, createController)
+route.post(ROUTES_GATEWAY_ENDPOINT.GATEWAY_ENDPOINT_CREATE, createController)
 
 export default route

@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction, Router } from 'express'
 import { logger } from '@/shared/utils/Logger'
 
-import { ROUTES_ENDPOINT_API } from '@/core/routes/v1/const.routes'
+import { ROUTES_GATEWAY_ENDPOINT } from '@/core/routes/v1/const.routes'
 import routes from './routes'
 import { CreateEntityException } from '@/shared/exceptions'
 const route = Router()
 
-route.use(ROUTES_ENDPOINT_API.ENDPOINT_API, routes)
+route.use(ROUTES_GATEWAY_ENDPOINT.GATEWAY_ENDPOINT, routes)
 
 route.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     logger.error(err + '\n')
