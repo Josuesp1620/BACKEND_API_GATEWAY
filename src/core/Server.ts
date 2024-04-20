@@ -18,12 +18,12 @@ export class Server {
         this._port = port
         this._app = express()
         
-        // const corsOptions = {
-        //     origin: process.env.HOST_FRONT,
-        //     optionsSuccessStatus: 200
-        // };
+        const corsOptions = {
+            origin: process.env.HOST_FRONT,
+            optionsSuccessStatus: 200
+        };
 
-        this._app.use(cors())    
+        this._app.use(cors(corsOptions))    
 
         this._app.use((_req : any, _res : any, next : any) => {
             next();
