@@ -1,6 +1,6 @@
 export const ROUTE_VERSION = '/api/v1'
 
-const GATEWAY_APPLICATION : string = '/gateway-endpoint'
+const GATEWAY_APPLICATION : string = '/gateway-application'
 const GATEWAY_APPLICATION_CREATE : string = '/create'
 
 export const ROUTES_GATEWAY_APPLICATION = {
@@ -17,7 +17,7 @@ export const ROUTES_GATEWAY_ENDPOINT = {
 
 
 const GATEWAY_ENTRY : string = '/gateway-entry'
-const GATEWAY_ENTRY_APPLICATION : string = '/gateway-entry'
+const GATEWAY_ENTRY_APPLICATION : string = '/app'
 export const ROUTES_GATEWAY_ENTRY = {
     GATEWAY_ENTRY,
     GATEWAY_ENTRY_APPLICATION,
