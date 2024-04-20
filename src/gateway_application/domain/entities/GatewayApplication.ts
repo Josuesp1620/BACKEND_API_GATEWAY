@@ -3,7 +3,7 @@ export interface GatewayApplicationEntity {
     name?: string
     upstream_url?: string
     active?: boolean
-    origin_urls?: string[]
+    origin_urls?: string | string[]
     api_key?: string
     createdAt?: Date
     updatedAt?: Date

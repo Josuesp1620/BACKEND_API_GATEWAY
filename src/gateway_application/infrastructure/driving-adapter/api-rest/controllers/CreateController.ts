@@ -12,7 +12,7 @@ export const createController = async (req: Request, res: Response, next: NextFu
         const data : Entity = {
             name,
             upstream_url,
-            origin_urls
+            origin_urls : origin_urls.replace(' ', '').split(',') 
         }
         
         const sequelizeRepository = new ImplementationSequelize()
