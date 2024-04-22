@@ -33,8 +33,12 @@ class ImplementationSequelize implements Repository {
         return null;
     }    
 
-    async delete (id: string) : Promise<void> {
-        await Sequelize.destroy({ where: { id } })
+    async delete (id: string) : Promise<void | null > {
+        try {
+            await Sequelize.destroy({ where: { id } })
+        }catch (e) {
+            return null;
+        }
     }
 
     async getById(id: string): Promise<Entity | null> {
